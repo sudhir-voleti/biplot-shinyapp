@@ -59,6 +59,13 @@ homebrew.biplot = function(data3,    # input data with row and col names
 
 shinyServer(function(input, output,session) {
   
+  output$downloadData <- downloadHandler(
+    filename = function() { "socioeconomics.csv" },
+    content = function(file) {
+      write.csv(read.csv("data/bi-plot example data socioeconomics.csv"), file, row.names=F, col.names=F)
+    }
+  )
+  
 Dataset <- reactive({
   if (is.null(input$file)) { return(NULL) }
   else{
@@ -75,6 +82,7 @@ output$biplot = renderPlot({
   homebrew.biplot(Dataset(), input$k1, input$k4, input$cex,input$cex2)  
 }
   })
+
 
 
 
