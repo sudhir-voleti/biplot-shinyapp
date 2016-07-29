@@ -7,7 +7,7 @@ homebrew.biplot = function(data3,    # input data with row and col names
                            k4,cex,cex2
                            ){       # how many units to show on the plot
   fit.pc = princomp(data3, 
-                    cor = TRUE, 
+                    cor = T, 
                     scores = TRUE)
   plot(fit.pc$loadings[,1:2], # use only top 2 prinComps
        
