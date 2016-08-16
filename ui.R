@@ -24,11 +24,13 @@ shinyUI(pageWithSidebar(
     
     tabsetPanel(type = "tabs",
                 #
-                tabPanel("Overview",h4(p("How to Use this app")),
-                         h5(p("Data input")),
+                tabPanel("Overview",
+                         h4(p("Data input")),
                          p("To plot Bi-plot, this app needs one input from the user. In left-sidebar panel, click on Browse and upload the data file. Note that this data file should be in csv format with headers. Also first column of the data should be row names. You can download and see the example file for this app from below download link.",align="justify"),
                          
                          downloadButton('downloadData', 'Download Example file'),
+                         
+                         br(),br(),
                          
                          p("Please note that download will not work with RStudio interface. Download will work only in web-browsers. So open this app in a web-browser and then download the example file. For opening this app in web-browser click on \"Open in Browser\" as shown below -"),
                          
