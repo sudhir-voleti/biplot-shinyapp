@@ -5,9 +5,10 @@
 library("shiny")
 #library("foreign")
 
-shinyUI(pageWithSidebar(
+shinyUI(fluidPage(
   # Header:
-  headerPanel("Bi Plot App"),
+  #headerPanel("Bi Plot App"),
+  titlePanel(title=div(img(src="logo.png",align='right'),"Bi Plot App")),
   # Input in sidepanel:
   sidebarPanel(
 
